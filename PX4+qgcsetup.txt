@@ -1,0 +1,42 @@
+Step one: download WSL2 with wsl --install in command prompt
+	type bash in command prompt to enable linux
+
+step two: navigate to a directory of your choosing and download PX4
+	with git clone https://github.com/PX4/PX4-Autopilot.git
+	navigate to PX4-Autopilot/Tools/setup and run ubuntu.sh
+
+step three: edit settings.json in airsim folder in windows to include 		settings (found in GitHub)
+
+step four: nano ~/.bashrc in wsl to include the following:
+	export PX4_SIM_HOST_ADDR=172.31.32.1
+	(this ip should be the IP of WSL found on windows) 
+	
+optional: make sure port 4560 is not being blocked by firewall 
+
+step five: navigate to PX4 main folder and run command:
+	make px4_sitl none_iris
+	(should take some time for first time run)
+
+optional(if it does not run): if PX4 gives an error, it could be 
+	due to wrong empy version. You can install the correct 
+	version with python3 -m pip install empy==3.3.4
+
+step six: download QGroundcontrol on windows machine
+
+step seven: open and navigate to application settings then comms links
+	
+step eight: name it however you like, but make sure you use UDP and port 14580
+	additionally put the address of the of the WSL address (in WSL) in the address
+	go back to main screen and
+
+step nine: go back and manually connect to new link located in 
+	the top left of the screen 
+
+step ten: start unreal project from .sln, start px4 in wsl 
+	everything should be running and communicating with each other
+
+
+
+
+
+

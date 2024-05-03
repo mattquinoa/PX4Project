@@ -1,0 +1,56 @@
+step one(if you have old version of airsim): find old airsim folder
+	rm -r -force airsim
+
+step two: install correct version of visual studio (2022)
+	install correct packages: Desktop development with 
+	C++ and windows 11 SDK and .NET framework 4.8.1 SDK
+
+step three: download unreal engine 4.27 from epic games launcher
+
+step four: open visual studio 2022 developer command prompt
+		download airsim with command:
+		https://github.com/microsoft/AirSim.git
+		after download, navigate to airsim folder
+		run build.cmd 
+
+step four: open unreal engine 4.27 and create a new blank project
+	open project in unreal engine
+	(if you have downloaded for first time, it will take some 	time to load)
+
+Step five: create C++ class in unreal project (class can be empty)
+	(needs at least one class to compile with visual studio)
+	(this will also automatically open visual studio)
+
+step six: go to airsim folder and copy the Unreal/Plugins folder 
+	into unreal project
+
+step seven: edit your unreal project with a text editor to include 
+	airsim dependencies
+
+step eight: edit config\DefaultGAme.ini
+	+MapsToCook=(FilePath="/AirSim/AirSimAssets")
+
+step nine: save all changes and close visual studio, text editors, 	and unreal engine. 
+
+step ten: right click on unreal project and generate Visual Studio 	Project Files
+
+step eleven: open .sln file inside unreal project folder
+
+step twelve: select debug GameEditor and click run 
+	(this should automatically open project in unreal engine
+
+step thirteen: set player start so it does not fall through map
+
+step fourteen: go to window tab and click world settings 
+		Then go to GameMode Override and 
+		select AirSimeGameMode
+		then build (make sure you select no on start to 
+		enable quadcoptor) 
+
+optional: editor preferences and search CPU and check. 
+
+MAKE SURE YOU SAVE ALL CHANGES
+
+	
+	
+	
