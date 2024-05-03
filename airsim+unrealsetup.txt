@@ -9,7 +9,7 @@ step three: download unreal engine 4.27 from epic games launcher
 
 step four: open visual studio 2022 developer command prompt
 		download airsim with command:
-		https://github.com/microsoft/AirSim.git
+		git clone https://github.com/microsoft/AirSim.git
 		after download, navigate to airsim folder
 		run build.cmd 
 
